@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class H2{
+    //Main programm
+    public static void main(String[] args) {
+        
+        tollMeetriks();
+        ellipsiPindala();
+        minutidTundideks();
+        sportlasteKiirus();
+
+    }
+    //Alamprogramm kus tollid teisendatakse meetriteks
+    public static void tollMeetriks() {
+
+        //Kasutan scannerit, et saada kasutaja sisestust
+        Scanner sisestus = new Scanner(System.in);
+        //Ekraanile tuleb kysimus
+        System.out.print("Sisestage tolli väärtus, mida te tahate teisendada meetriteks: ");
+        //Hoiustatakse kasutaja poolt m22ratud tolli vaartust
+        int tolliVaartus = sisestus.nextInt();
+        //V2ljastab kasutaja valitud väärtuse
+        System.out.println("Valisite väärtuseks "+tolliVaartus);
+        //Suleb scanneri meetodi
+        sisestus.close();
+        //See teiseldab tolliv22rtuse meetriteks. 1 toll on 0.0254 meetrit 
+        double summa = tolliVaartus * 0.0254;
+        //V2ljastab summa 
+        System.out.println(tolliVaartus+" tolli on "+summa+" meetrit.\n\n");
+
+
+        
+    }   
+    //Alamprogramm kus leitase ellpisi pindala
+    public static void ellipsiPindala() {
+     
+        // solve for the area of an ellipse
+   
+        Scanner sisestus = new Scanner(System.in);
+        System.out.println("Enter distance in y axis: ");
+        double a = sisestus.nextDouble();
+        System.out.println("Enter distance in x axis: ");
+        double b = sisestus.nextDouble();
+        double pindala = Math.PI*a*b;
+        System.out.printf("The area of an ellipse is %.2f"+pindala);
+        sisestus.close();
+       }
+    
+    //Alamprogramm kus teisendatakse minutid tundideks ja minutiteks
+    public static void minutidTundideks(){
+
+
+    }
+    //Alamprogramm kus leitakse sportlaste kiirus
+    public static void sportlasteKiirus(){
+
+
+    }
+
+}
