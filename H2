@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class H2{
     //Main programm
@@ -21,8 +22,6 @@ public class H2{
         int tolliVaartus = sisestus.nextInt();
         //V2ljastab kasutaja valitud väärtuse
         System.out.println("Valisite väärtuseks "+tolliVaartus);
-        //Suleb scanneri meetodi
-        sisestus.close();
         //See teiseldab tolliv22rtuse meetriteks. 1 toll on 0.0254 meetrit 
         double summa = tolliVaartus * 0.0254;
         //V2ljastab summa 
@@ -33,28 +32,45 @@ public class H2{
     }   
     //Alamprogramm kus leitase ellpisi pindala
     public static void ellipsiPindala() {
-     
-        // solve for the area of an ellipse
-   
+        //Scanner nimega sisestus, et saada kasutaja sisestus
         Scanner sisestus = new Scanner(System.in);
-        System.out.println("Enter distance in y axis: ");
+        //Küsib ksautajalt külje a pikkuse
+        System.out.println("Sisestage pikema külje (a) pikkus: ");
+        //Hoiustab a pikkuse 
         double a = sisestus.nextDouble();
-        System.out.println("Enter distance in x axis: ");
+        //Küsib ksautajalt külje b pikkuse
+        System.out.println("Sisestage lühema külje (b) pikkus: ");
+        //Hoiustab a pikkuse 
         double b = sisestus.nextDouble();
-        double pindala = Math.PI*a*b;
-        System.out.printf("The area of an ellipse is %.2f"+pindala);
-        sisestus.close();
+        //Teeb vajalikud matemaarilised asjad ära valemi järgi
+        double pindala = Math.PI * a * b;
+        //Väljastab vastuse ning ümardab selle
+        System.out.printf("Ellipsi pindala on "+Math.round(pindala)+"\n\n");
+        
        }
     
     //Alamprogramm kus teisendatakse minutid tundideks ja minutiteks
     public static void minutidTundideks(){
+        Scanner sisestus = new Scanner(System.in);
+        System.out.println("Sisestage minutid, et need teiseldada tundideks: ");
+        //Hoiustab sisestatud minutid
+        int tunnidVaartus = sisestus.nextInt();
+        //Teeb arvutused, et saada sisestatud minutid tundideks
+        int tunnid = tunnidVaartus / 60;
+        //Teeb arvutused et saada ulejäänud minutid sisestusest
+        int minutid = tunnidVaartus % 60;
+        //Väljastab tunnid ja minutid 
+        System.out.println(tunnidVaartus+" minutit on "+tunnid+" tundi ja "+minutid+" minutit. ");
+
+    }
+    //Alamprogrammid kus leitakse sportlaste kiirused
+    public static void sportlasteKiirus1(){
 
 
     }
-    //Alamprogramm kus leitakse sportlaste kiirus
-    public static void sportlasteKiirus(){
+    //Kahe sportlase vahe
+    public static void sportlasteKiirus2(){
 
 
     }
-
 }
