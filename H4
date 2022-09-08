@@ -1,0 +1,31 @@
+//karl eerik kotter
+import java.util.Scanner;
+
+
+public class H4 {
+    public static void main(String[] args){
+
+        Scanner sisestus = new Scanner(System.in);
+        System.out.print("Sisestage tekst: ");
+        String tekst = sisestus.nextLine();
+
+        int count  = 1;
+        int i = 0;
+        
+        for(i = 0; i < tekst.length() - 1; i++);
+        {
+            if ((tekst.charAt(i) == ' ') && (tekst.charAt(i + 1) != ' '))
+            {
+                count++;
+            }
+        
+        }
+
+
+
+        System.out.printf("Sisestasite: "+tekst.toUpperCase());
+        System.out.printf("\nTeksti pikkus: "+tekst.length());
+        System.out.println("\nSõnade arv: " + count);
+        System.out.printf("Esimene sõna: %s ", tekst);
+    }
+}
