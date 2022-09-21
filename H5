@@ -1,0 +1,29 @@
+//Karl Eerik Kotter
+import java.util.Scanner;
+import java.math.BigInteger;
+
+public class H5 {
+ public static void main(String[] args) {
+
+    BigInteger esimeneVaartus, teineVaartus, summa;
+
+
+    Scanner sisestus = new Scanner(System.in);
+    System.out.print("Esimene arv: ");
+    esimeneVaartus = sisestus.nextBigInteger();
+    System.out.print("Teine arv; ");
+    teineVaartus = sisestus.nextBigInteger();
+        if (teineVaartus.equals(0));
+            System.out.print("Teine arv ei tohi olla 0!");
+            return;
+    
+    summa = esimeneVaartus.divide(teineVaartus);
+    System.out.print("Vastus: "+summa);
+    sisestus.close();
+
+
+
+
+
+ }
+}
